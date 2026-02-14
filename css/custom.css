@@ -24,6 +24,20 @@ a:hover {
   margin: 50px auto 10px;
 }
 
+/* Mobile: stack text then photo (column order), then Writing section follows */
+@media (max-width: 549px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-content .columns {
+    width: 100%;
+    margin-left: 0;
+    float: none;
+  }
+}
+
 section {
   margin-bottom: 40px;
 }
@@ -67,4 +81,43 @@ footer {
 footer a {
   display: inline-block;
   margin: 0 10px;
+}
+
+/* Dark mode – respects system/browser preference */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #1a1a1a;
+    color: #e5e5e5;
+  }
+
+  a {
+    color: #6eb8e0;
+  }
+
+  a:hover {
+    color: #8ecce8;
+  }
+
+  .section-heading {
+    color: #9ca3af;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #e5e5e5;
+  }
+
+  h5 {
+    color: #b0b0b0;
+  }
+
+  p {
+    color: #d4d4d4;
+  }
 }
