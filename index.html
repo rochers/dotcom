@@ -1,82 +1,337 @@
-<html>
-  <head>
-    <title>Scott Rocher</title>
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
-    <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/custom.css?v=4">
-  </head>
-  <body>
-    <div class="container">
-      <div class="row main-content">
-        <div class="six columns">
-          <h3>Scott Rocher</h3>
-          <p>
-            I am the Chief Product Officer at <a href="https://helpscout.com">Help Scout</a> where I lead the team that's crafting a world-class customer communication platform for growing businesses.</p>
-          <p>Previously, I was a co-founder of two startups and worked on products including <a href="https://stitchfix.com">Stitch Fix</a>, <a href="https://bluebottlecoffee.com">Blue Bottle Coffee</a>, <a href="http://www.wired.com/2014/04/blue-bottle-tonx-handsome/">Tonx</a>, and <a href="https://www.yahoo.com">Yahoo!</a> 
-          </p>
-          <p>
-           I live in the Bay Area of California and grew up in Texas. I love travel, food, and photography and try to mix all three as often as possible. 
-          </p>
-        </div>
-        <div class="six columns profile">
-          <img src="Scott-Profile-Color-2024.jpg" />
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Scott Rocher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Scott Rocher — Chief Product Officer at Help Scout. Writing, podcasts, and photography.">
+  <meta property="og:title" content="Scott Rocher">
+  <meta property="og:description" content="Chief Product Officer at Help Scout. Writing, podcasts, and photography.">
+  <meta property="og:url" content="https://scottrocher.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://scottrocher.com/Scott-Profile-Color-2024.jpg">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Fragment+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #faf8f5;
+      --ink: #16140f;
+      --ink-soft: #57534a;
+      --hairline: #e2ded7;
+      --accent: #d4502e;
+      --accent-soft: #f3c4b3;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #141311;
+        --ink: #ece9e2;
+        --ink-soft: #a8a397;
+        --hairline: #2e2c27;
+        --accent: #f06a42;
+        --accent-soft: #5b2c1c;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { color-scheme: light dark; }
+
+    body {
+      font-family: "Schibsted Grotesk", "Helvetica Neue", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ————— mono labels ————— */
+    .label {
+      font-family: "Fragment Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    /* ————— hero ————— */
+    header { padding: clamp(48px, 9vh, 96px) 0 0; }
+
+    h1 {
+      font-size: clamp(2.9rem, 9.5vw, 6.8rem);
+      font-weight: 850;
+      letter-spacing: -0.045em;
+      line-height: 0.95;
+      margin: 0 0 10px -0.05em;
+    }
+
+    .role {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-weight: 500;
+      color: var(--ink-soft);
+    }
+    .role a { color: inherit; }
+
+    .now {
+      margin-top: 26px;
+      padding: 14px 0;
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+      display: flex;
+      gap: 14px;
+      align-items: baseline;
+    }
+    .now .label { color: var(--accent); }
+    .now p { font-size: 0.95rem; color: var(--ink-soft); }
+
+    /* ————— bio ————— */
+    .bio {
+      display: grid;
+      grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+      gap: clamp(28px, 5vw, 72px);
+      padding: clamp(36px, 6vh, 64px) 0;
+      align-items: start;
+    }
+    .bio-text p {
+      max-width: 58ch;
+      font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+      line-height: 1.55;
+      font-weight: 420;
+    }
+    .bio-text p + p { margin-top: 1.1em; }
+
+    .portrait { position: relative; }
+    .portrait img {
+      width: 100%;
+      display: block;
+      border-radius: 4px;
+    }
+    .portrait .label { display: block; margin-top: 10px; }
+
+    /* ————— links ————— */
+    a {
+      color: var(--ink);
+      text-decoration: none;
+      background-image: linear-gradient(var(--accent), var(--accent));
+      background-repeat: no-repeat;
+      background-size: 100% 1px;
+      background-position: 0 100%;
+    }
+    a:hover { color: var(--accent); }
+    .label a, .role a { background-image: none; }
+
+    /* ————— sections ————— */
+    section {
+      border-top: 1px solid var(--hairline);
+      padding: clamp(32px, 5vh, 56px) 0;
+      display: grid;
+      grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+      gap: clamp(24px, 5vw, 72px);
+      align-items: start;
+    }
+
+    .sec-head { display: flex; gap: 14px; align-items: baseline; }
+    .sec-head .num { color: var(--accent); }
+    .sec-head h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .entries { display: grid; gap: 26px; }
+    .entry h3 {
+      font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      line-height: 1.3;
+      max-width: 32ch;
+    }
+    .entry h3 a {
+      background-size: 0% 1px;
+      transition: background-size 200ms ease, color 150ms ease;
+    }
+    .entry h3 a:hover { background-size: 100% 1px; }
+    .entry .where {
+      margin-top: 3px;
+      font-family: "Fragment Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .entry .where .arrow {
+      display: inline-block;
+      transition: transform 180ms ease;
+    }
+    .entry:hover .where .arrow { transform: translateX(4px); }
+    .entry:hover .where { color: var(--accent); }
+
+    /* ————— photo strip ————— */
+    .strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .strip a {
+      background-image: none;
+      display: block;
+      aspect-ratio: 4 / 5;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+    .strip img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 400ms cubic-bezier(.2,.6,.2,1);
+    }
+    .strip a:hover img { transform: scale(1.04); }
+    .strip-note { margin-top: 12px; }
+
+    /* ————— footer ————— */
+    footer {
+      border-top: 1px solid var(--hairline);
+      padding: 34px 0 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    footer nav { display: flex; gap: 22px; }
+    footer nav a {
+      font-size: 0.92rem;
+      font-weight: 500;
+      background-size: 0% 1px;
+      transition: background-size 200ms ease, color 150ms ease;
+    }
+    footer nav a:hover { background-size: 100% 1px; }
+
+    /* ————— signature moment: staggered reveal on load ————— */
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal {
+        opacity: 0;
+        transform: translateY(14px);
+        animation: rise 640ms cubic-bezier(.2,.65,.25,1) forwards;
+      }
+      .reveal:nth-child(1) { animation-delay: 60ms; }
+      .r1 { animation-delay: 60ms; }
+      .r2 { animation-delay: 150ms; }
+      .r3 { animation-delay: 240ms; }
+      .r4 { animation-delay: 330ms; }
+      .r5 { animation-delay: 420ms; }
+      .r6 { animation-delay: 500ms; }
+      .r7 { animation-delay: 580ms; }
+      @keyframes rise {
+        to { opacity: 1; transform: none; }
+      }
+    }
+
+    /* ————— mobile ————— */
+    @media (max-width: 700px) {
+      .bio { grid-template-columns: 1fr; }
+      .portrait { max-width: 320px; }
+      section { grid-template-columns: 1fr; gap: 18px; }
+      .strip { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1 class="reveal r1">Scott Rocher</h1>
+      <p class="role reveal r2">Chief Product Officer at <a href="https://helpscout.com">Help Scout</a></p>
+      <div class="now reveal r3">
+        <span class="label">Now</span>
+        <!-- EDIT ME: one-line current focus, easy to update -->
+        <p>Building customer support for relationship businesses · thinking about how small teams punch above their weight.</p>
       </div>
-      <div class="row">
-        <div class="twelve columns">
-          <section>
-            <h4 class="section-heading">Writing</h4>
-            <h5 class="mb0">Serving Dynamic Meta Tags in a Serverless Architecture</h5>
-            <a href="https://medium.com/@rochers/serving-dynamic-meta-tags-in-a-serverless-architecture-64ad69d33c74?source=friends_link&sk=6f05dc60c3109fc26f92d037aa841dcb">Read on Medium ></a>
-            <br><br>
-            <h5 class="mb0">Why Meditation May Not Work For You</h5>
-            <a href="https://medium.com/@rochers/why-meditation-may-not-work-for-you-1664c006518f?source=friends_link&sk=aa1c8772de48c4d24a2917f9f97e1bdd">Read on Medium ></a>
-            <br><br>
-            <h5 class="mb0">Solve a problem people have today, not a future one</h5>
-            <a href="https://medium.com/@rochers/solve-a-problem-people-have-today-not-a-future-one-4696d55a4d7f">Read on Medium ></a>
-            <br><br>
-            <h5 class="mb0">Lifting Off: A Manager's Guide to Designing the Best On-boarding Experience</h5>
-            <a href="https://medium.com/@rochers/lifting-off-645a7a339e7e">Read on Medium ></a>
-            <br><br>
-            <h5 class="mb0">On Building Custom</h5>
-            <a href="https://medium.com/@rochers/on-building-custom-8d7e6159a16c">Read on Medium ></a>
-          </section>
+    </header>
 
-          <section>
-            <h4 class="section-heading">Podcasts</h4>
-
-            <h5 class="mb0">CX Roundtable</h5>
-            <a href="https://www.youtube.com/watch?si=PKfr6l65VIFxseBe&v=mwlFY3C774U&feature=youtu.be&themeRefresh=1/">Watch on YouTube ></a>
-            <br><br>
-            <h5 class="mb0">Practical Product, Episode 7</h5>
-            <a href="https://www.heavybit.com/library/podcasts/practical-product/ep-7-digital-dev-at-blue-bottle-coffee/">Listen at Heavybit ></a>
-          </section>
-          
-          <section>
-            <h4 class="section-heading">Photography</h4>
-            <h5 class="mb0">Portfolio</h5>
-            <a href="https://photo.scottrocher.com">Visit ></a>
-          </section>
-          
-         
-          <footer>
-            <a href="https://medium.com/@rochers/latest">Medium</a>
-            <a href="https://twitter.com/rochers">Twitter</a>
-            <a href="https://www.linkedin.com/in/scottrocher">LinkedIn</a>
-            <a href="https://instagram.com/rochers">Instagram</a>
-          </footer>
-        </div>
+    <div class="bio reveal r4">
+      <div class="bio-text">
+        <p>I lead teams at Help Scout, crafting a world-class customer communication platform for relationship businesses. Previously, I co-founded two startups and worked on products including <a href="https://stitchfix.com">Stitch Fix</a>, <a href="https://bluebottlecoffee.com">Blue Bottle Coffee</a>, <a href="http://www.wired.com/2014/04/blue-bottle-tonx-handsome/">Tonx</a>, and <a href="https://www.yahoo.com">Yahoo!</a></p>
+        <p>I live in the Bay Area of California and grew up in Texas. I love travel, food, and photography — and try to mix all three as often as possible.</p>
+      </div>
+      <figure class="portrait">
+        <img src="Scott-Profile-Color-2024.jpg" alt="Scott Rocher">
+      </figure>
     </div>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-32701852-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </body>
+    <main>
+      <section class="reveal r5">
+        <div class="sec-head"><span class="label num">01</span><h2>Writing</h2></div>
+        <div class="entries">
+          <article class="entry">
+            <h3><a href="https://medium.com/@rochers/serving-dynamic-meta-tags-in-a-serverless-architecture-64ad69d33c74">Serving Dynamic Meta Tags in a Serverless Architecture</a></h3>
+            <p class="where">Medium <span class="arrow">→</span></p>
+          </article>
+          <article class="entry">
+            <h3><a href="https://medium.com/@rochers/why-meditation-may-not-work-for-you-1664c006518f">Why Meditation May Not Work For You</a></h3>
+            <p class="where">Medium <span class="arrow">→</span></p>
+          </article>
+          <article class="entry">
+            <h3><a href="https://medium.com/@rochers/solve-a-problem-people-have-today-not-a-future-one-4696d55a4d7f">Solve a problem people have today, not a future one</a></h3>
+            <p class="where">Medium <span class="arrow">→</span></p>
+          </article>
+          <article class="entry">
+            <h3><a href="https://medium.com/@rochers/lifting-off-645a7a339e7e">Lifting Off: A Manager's Guide to Designing the Best On-boarding Experience</a></h3>
+            <p class="where">Medium <span class="arrow">→</span></p>
+          </article>
+          <article class="entry">
+            <h3><a href="https://medium.com/@rochers/on-building-custom-8d7e6159a16c">On Building Custom</a></h3>
+            <p class="where">Medium <span class="arrow">→</span></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="reveal r6">
+        <div class="sec-head"><span class="label num">02</span><h2>Podcasts</h2></div>
+        <div class="entries">
+          <article class="entry">
+            <h3><a href="https://www.youtube.com/watch?v=mwlFY3C774U">CX Roundtable</a></h3>
+            <p class="where">YouTube <span class="arrow">→</span></p>
+          </article>
+          <article class="entry">
+            <h3><a href="https://www.heavybit.com/library/podcasts/practical-product/ep-7-digital-dev-at-blue-bottle-coffee/">Practical Product, Episode 7 — Digital Dev at Blue Bottle Coffee</a></h3>
+            <p class="where">Heavybit <span class="arrow">→</span></p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="sec-head"><span class="label num">03</span><h2>Photography</h2></div>
+        <div>
+          <div class="strip">
+            <a href="https://photo.scottrocher.com/x100f"><img src="photos/photo-x100f.jpg" alt="Surfer walking along the beach below Morro Rock" loading="lazy"></a>
+            <a href="https://photo.scottrocher.com/leica-nyc"><img src="photos/photo-leica-nyc.jpg" alt="Couple asleep on a New York City subway" loading="lazy"></a>
+            <a href="https://photo.scottrocher.com/mexico-city"><img src="photos/photo-cdmx.jpg" alt="Street scene in Mexico City" loading="lazy"></a>
+          </div>
+          <p class="strip-note label"><a href="https://photo.scottrocher.com">Full portfolio at photo.scottrocher.com →</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span class="label">© 2026 Scott Rocher</span>
+      <nav>
+        <a href="https://medium.com/@rochers/latest">Medium</a>
+        <a href="https://twitter.com/rochers">Twitter</a>
+        <a href="https://www.linkedin.com/in/scottrocher">LinkedIn</a>
+        <a href="https://instagram.com/rochers">Instagram</a>
+      </nav>
+    </footer>
+  </div>
+</body>
 </html>
