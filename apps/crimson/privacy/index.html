@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Crimson Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="How Crimson: Darkroom Simulator handles your photos and data.">
+  <meta name="theme-color" content="#0b0708">
+  <link rel="icon" type="image/png" href="../img/icon.png">
+  <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=Fragment+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --room: #0b0708;
+      --bench: #160708;
+      --bench-edge: #2a1416;
+      --paper: #efe9df;
+      --paper-soft: #cfc3bb;
+      --paper-dim: #8f807a;
+      --safelight: #d7202d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--room);
+      color: var(--paper);
+      font-family: "Barlow", "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-left: max(20px, env(safe-area-inset-left));
+      padding-right: max(20px, env(safe-area-inset-right));
+    }
+    .page { max-width: 680px; margin: 0 auto; }
+    a { color: var(--paper); text-decoration-color: var(--safelight); text-underline-offset: 3px; }
+    a:hover { color: #fff; }
+    .mono {
+      font-family: "Fragment Mono", ui-monospace, monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--paper-dim);
+    }
+    .bar { display: flex; align-items: center; gap: 12px; padding-block: 24px; }
+    .bar a { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .bar img { width: 32px; height: 32px; border-radius: 8px; }
+    h1 {
+      margin-top: 32px;
+      font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+      font-weight: 700;
+      font-size: clamp(2.6rem, 8vw, 3.8rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+    }
+    .updated { margin-top: 12px; }
+    .summary {
+      margin-top: 32px;
+      background: var(--bench);
+      border: 1px solid var(--bench-edge);
+      border-left: 3px solid var(--safelight);
+      border-radius: 12px;
+      padding: 20px 22px;
+    }
+    .summary p { color: var(--paper); font-weight: 500; }
+    .summary ul { margin-top: 10px; padding-left: 20px; color: var(--paper-soft); }
+    .summary li + li { margin-top: 4px; }
+    h2 {
+      margin-top: 44px;
+      font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+    }
+    p, ul { margin-top: 12px; color: var(--paper-soft); }
+    ul { padding-left: 22px; }
+    li + li { margin-top: 6px; }
+    strong { color: var(--paper); font-weight: 600; }
+    footer {
+      margin-top: 64px;
+      border-top: 1px solid var(--bench-edge);
+      padding-block: 24px max(40px, env(safe-area-inset-bottom));
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    footer a { text-decoration: none; }
+    footer a:hover { color: var(--paper); }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="bar">
+      <a href="../"><img src="../img/icon.png" alt="" width="32" height="32"><span class="mono">Crimson: Darkroom Simulator</span></a>
+    </header>
+
+    <h1>Privacy Policy</h1>
+    <p class="updated mono">Effective November 16, 2026</p>
+
+    <div class="summary">
+      <p>The short version</p>
+      <ul>
+        <li>Your photos never leave your device.</li>
+        <li>There are no accounts, no ads, and no tracking.</li>
+        <li>Crimson sends one thing: anonymous counts of darkroom steps, which you can turn off in Settings.</li>
+      </ul>
+    </div>
+
+    <p>This policy covers Crimson: Darkroom Simulator (“Crimson”), an app for iPhone and iPad made by Scott Rocher (“I”, “me”). It explains what the app does with your information and why.</p>
+
+    <h2>Your photos</h2>
+    <p>With your permission, Crimson reads your photo library so it can show your photos as film negatives on the lightbox. Everything that happens to a photo — focusing, exposing, developing, printing — is done on your device. Your photos are never uploaded to me or to anyone else.</p>
+    <ul>
+      <li><strong>Saving prints.</strong> Crimson adds a print to your photo library only when you choose to save it. It asks for add-only access for this, so it can't read or change anything else.</li>
+      <li><strong>The camera.</strong> If you take a photo inside Crimson to print, it stays inside the app unless you turn on <em>Save Photos You Take</em> in Settings (off by default).</li>
+      <li><strong>Your prints.</strong> Prints you hang to dry, along with their recipes (exposure, contrast grade, development times), are stored on your device. They're removed when you delete the app.</li>
+    </ul>
+
+    <h2>Negative names</h2>
+    <p>Crimson gives each negative a short name, like “Pier at dusk”. The name is written on your device using Apple's on-device models and image analysis; the photo isn't sent anywhere to do this.</p>
+    <p>When a photo has a location and was taken away from home, Crimson looks up the town name to use in the title. To do this it sends the photo's coordinates (not the photo) to Apple's map service, which returns a place name. To know what “home” is, Crimson estimates the area where most of your photos were taken and stores that estimate only on your device. Neither the coordinates nor your home area are ever sent to me.</p>
+
+    <h2>Anonymous usage counts</h2>
+    <p>To learn which parts of the darkroom people use and where they get stuck, Crimson sends anonymous usage signals through <a href="https://telemetrydeck.com/privacy/">TelemetryDeck</a>, a privacy-focused analytics service. A signal says that a step happened, for example that a negative was chosen, a test strip was made, a print was developed or hung, the unlock screen was shown, or Crimson Lifetime was purchased or restored.</p>
+    <ul>
+      <li>Signals include basic technical details such as the app version, the system version, the device model, and your language and region.</li>
+      <li>Signals use an anonymized device identifier, one-way hashed, so usage can be counted without identifying you. It is not linked to your identity and is never used for tracking or advertising.</li>
+      <li>Signals never include your photos, their names, their locations, or anything you write.</li>
+      <li>You can turn this off at any time in Crimson's Settings with <strong>Share Anonymous Usage</strong>. When it's off, nothing is sent.</li>
+    </ul>
+
+    <h2>Purchases</h2>
+    <p>Crimson Lifetime is bought through the App Store. Apple handles the payment; I never see your payment details or your Apple Account. The app asks the App Store whether you've unlocked Crimson, and that's all it knows about your purchase.</p>
+
+    <h2>What Crimson doesn't do</h2>
+    <ul>
+      <li>No accounts or sign-in.</li>
+      <li>No advertising, and no advertising or tracking SDKs.</li>
+      <li>No selling or sharing of your data.</li>
+      <li>No tracking across other companies' apps or websites.</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>Crimson doesn't knowingly collect personal information from anyone, including children. The anonymous usage counts described above are the only data it sends.</p>
+
+    <h2>Your choices</h2>
+    <p>You can change Crimson's access to your photos and camera at any time in the Settings app under Privacy &amp; Security, and turn off usage counts in Crimson's own Settings. Because I don't hold any personal information about you, there's nothing for me to export or delete; deleting the app removes everything it stored on your device.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, I'll update it here and change the date at the top.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about privacy in Crimson? Email <a href="mailto:scottrocher@gmail.com">scottrocher@gmail.com</a>.</p>
+
+    <footer>
+      <a class="mono" href="../">Crimson</a>
+      <a class="mono" href="/">© 2026 Scott Rocher</a>
+    </footer>
+  </div>
+</body>
+</html>

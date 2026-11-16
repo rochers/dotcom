@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Crimson: Darkroom Simulator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Crimson is a black-and-white darkroom for iPhone and iPad. Print your own photos by hand, under the safelight.">
+  <meta property="og:title" content="Crimson: Darkroom Simulator">
+  <meta property="og:description" content="Print your own photos by hand, under the safelight.">
+  <meta property="og:url" content="https://scottrocher.com/apps/crimson/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://scottrocher.com/apps/crimson/img/icon.png">
+  <meta name="theme-color" content="#0b0708">
+  <link rel="icon" type="image/png" href="img/icon.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500&family=Fragment+Mono&display=swap" rel="stylesheet">
+  <style>
+    /* One look, on purpose: the darkroom with the safelight on. */
+    :root {
+      color-scheme: dark;
+      --room: #0b0708;
+      --paper: #efe9df;
+      --paper-soft: #c9bcb4;
+      --paper-dim: #8f807a;
+      --safelight: #d7202d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      background: var(--room) radial-gradient(circle at 50% 38%, rgba(215, 32, 45, 0.22), transparent 55%) no-repeat;
+      color: var(--paper);
+      font-family: "Barlow", "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      padding-left: max(20px, env(safe-area-inset-left));
+      padding-right: max(20px, env(safe-area-inset-right));
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-block: 64px;
+    }
+    .app-icon {
+      width: 112px;
+      height: 112px;
+      border-radius: 25px;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55);
+    }
+    h1 {
+      margin-top: 30px;
+      font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+      font-weight: 700;
+      font-size: clamp(3.4rem, 12vw, 5.5rem);
+      line-height: 0.9;
+      text-transform: uppercase;
+    }
+    .descriptor {
+      margin-top: 8px;
+      font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+      font-weight: 600;
+      font-size: 1.2rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--safelight);
+    }
+    .lede {
+      margin-top: 22px;
+      max-width: 30ch;
+      font-size: 1.2rem;
+      color: var(--paper-soft);
+      text-wrap: balance;
+    }
+    .store {
+      margin-top: 34px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 22px;
+      border-radius: 14px;
+      background: var(--safelight);
+      color: #fff;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .store:hover { background: #e3313d; }
+    .mono {
+      font-family: "Fragment Mono", ui-monospace, monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--paper-dim);
+    }
+    .devices { margin-top: 14px; }
+    footer {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      padding-block: 24px max(28px, env(safe-area-inset-bottom));
+    }
+    footer a { text-decoration: none; }
+    footer a:hover { color: var(--paper); }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="app-icon" src="img/icon.png" alt="Crimson app icon: a test strip on an easel" width="112" height="112">
+    <h1>Crimson</h1>
+    <p class="descriptor">Darkroom Simulator</p>
+    <p class="lede">Print your own photos by hand, under the safelight.</p>
+    <a class="store" href="https://apps.apple.com/app/id6832418150">Coming soon to the App Store</a>
+    <p class="mono devices">For iPhone and iPad</p>
+  </main>
+  <footer>
+    <a class="mono" href="privacy/">Privacy Policy</a>
+    <a class="mono" href="/">© 2026 Scott Rocher</a>
+  </footer>
+</body>
+</html>
